@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% block title %} {{ post.title }}:僕のブログ {% endblock %}
+{% block content %}
+<h1>{{ post.title }}</h1>
+{{ post.formatted_markdown|safe }}
+
+<hr>
+<div style="font-size:0.6em">
+{{ post.created_datetime }}
+<br>
+{{ post.updated_datetime }}
+</div>
+<hr>
+{% endblock %}
